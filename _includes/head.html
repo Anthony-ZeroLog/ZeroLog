@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.meta_description %}
+  <meta name="description" content="{{ page.meta_description }}">
+  {% else %}
+  <meta name="description" content="Blog técnico de Joaquin Martinez: software, redes y seguridad. Guía educativa para estudiantes, developers junior y profesionales en crecimiento.">
+  {% endif %}
+  <title>{%if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{- 'assets/css/styles.css' | relative_url -}}">
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Dev Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  {%- seo title=false -%}
+  <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1847821277936910336/MfUv30pv_400x400.jpg">
+</head>

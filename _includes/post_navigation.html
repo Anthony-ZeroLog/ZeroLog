@@ -1,0 +1,41 @@
+<div class="post__navigation">
+    <div class="post__navitem">
+        <div class="post__symbol">
+            <a {% if page.next %} href="{{ page.next.url }}" {% endif %}>
+                <i class="fa-solid fa-angle-left"></i>
+            </a>
+        </div>
+        <div class="post__navlink">
+            <p>
+                <a {% if page.next %} href="{{ page.next.url }}" {% endif %}>
+                    Post Siguiente
+                </a>
+            </p>
+            <p>
+                <a class="post__navtitle" {% if page.next %} href="{{ page.next.url }}" {% endif %}>
+                    {% if page.next %} {{ page.next.title | truncatechars: 28, "..." }} {% endif %}
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="post__navitem">
+        <div class="post__navlink">
+            <p>
+                <a {% if page.previous %} href="{{ page.previous.url }}" {% endif %}>
+                    Post Anterior
+                </a>
+            </p>
+            <p>
+                <a class="post__navtitle" {% if page.previous %} href="{{ page.previous.url }}" {% endif %}>
+                    {% if page.previous %} {{ page.previous.title | truncatechars: 28, "..." }} {% endif %}
+                </a>
+            </p>
+        </div>
+        <div class="post__symbol">
+            <a {% if page.previous %} href="{{ page.previous.url }}" {% endif %}>
+               <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+    </div>
+</div>

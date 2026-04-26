@@ -1,0 +1,31 @@
+---
+layout: default
+title: Archivo
+---
+
+<div class="main__archive">
+    <div class="main__subtitle content-center">
+        <div class="main__symbol"></div>
+        <h2>Archivo</h2>
+    </div>
+    {% for post in site.posts %}
+        <li class="main__archive--item">
+            <div class="main__archive--flex">
+                <div class="main__archive--left">
+                    <span class="main__archive--icon"><i class="fa-solid fa-meteor"></i></span>
+                    <small class="main__archive--date">{{ post.date | date: "%d-%m-%Y" }}</small>
+                </div>
+                <div class="main__archive--center">
+                    <div class="main__archive--symbol"></div>
+                </div>
+                <div class="main__archive--right">
+                    <p class="main__archive--title"><a href="{{ post.url }}" class="main__archive--post">{{ post.title }}</a></p>
+                    <div class="main__archive--categories">
+                        <small><i class="fa-solid fa-bars"></i></small>
+                        <small class="main__archive--categorie">{{ post.categories }}</small>
+                    </div>
+                </div>
+            </div>
+        </li>
+    {% endfor %}
+</div>

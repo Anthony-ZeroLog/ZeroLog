@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="post__content">
+    
+    <h2 class="post__title">{{ page.title }}</h2>
+
+    <div class="post__data">
+        
+        <span class="post__description"><small class="post__author">Anthony Joaquin Martinez </small>| {{ page.date | date: "%d-%m-%Y" }}</span>
+
+        <div class="post--category">
+            {% for category in page.categories %}
+                <a class="post__categories--element" href="/category/{{ category | slugify }}">{{ category }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="post__cover">
+        <img src="{{ page.img | relative_url }}" alt="Cover Post" class="post__img">
+    </div>
+
+    {{ content }}
+
+</div>
+
+<hr>
+
+<h2>Tags:</h2>
+<div class="post__tags">
+    {% for tag in page.tags %}
+        <a class="post__tags--element" href="/tag/{{ tag | slugify }}/">{{ tag }}</a>
+    {% endfor %}
+</div>
+
+<hr>
+
+<h2>¿Te ha gustado? ¡Compártelo! </h2>
+{% include post_share.html %}
+
+{% include post_navigation.html %}

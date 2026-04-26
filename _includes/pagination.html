@@ -1,0 +1,16 @@
+<div class="main__pagination">
+    <div class="main__pagination--next">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination__next"><i class="fa-solid fa-angle-left"></i>Anterior</a>
+        {% endif %}
+    </div>
+    <div class="main__pagination--number">
+         Mostrar el número de página actual 
+        <span class="pagination__current">{{ paginator.page }}</span>
+    </div>
+    <div class="main__pagination--prev">
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | relative_url }}" class="pagination__prev"><i class="fa-solid fa-angle-right"></i>Siguiente</a>
+        {% endif %}
+    </div> 
+</div>

@@ -1,0 +1,28 @@
+{% assign post_url = page.url | absolute_url %}
+{% assign post_title = page.title | url_encode %}
+
+<div class="post__sharing">
+
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ post_url }}" target="_blank" rel="noopener noreferrer">
+        Share on <i class="fab fa-linkedin"></i>
+    </a>
+
+    <a href="https://twitter.com/intent/tweet?text={{ post_title }}&url={{ post_url }}" target="_blank" rel="noopener noreferrer">
+        Share on <i class="fab fa-twitter"></i>
+    </a>
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ post_url }}" target="_blank" rel="noopener noreferrer">
+        Share on <i class="fab fa-facebook"></i>
+    </a>
+
+    <a href="https://t.me/share/url?url={{ post_url }}&text={{ post_title }}" target="_blank" rel="noopener noreferrer">
+        Share on <i class="fab fa-telegram"></i>
+    </a>
+
+    <a href="#" id="copyLink" onclick="copyToClipboard('{{ post_url }}', event)">
+        Copy Link <i class="fas fa-link"></i>
+    </a>
+
+</div>
+
+<p id="copyMessage" class="copyMessage">Enlace copiado al portapapeles</p>

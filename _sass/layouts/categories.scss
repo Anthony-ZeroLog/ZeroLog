@@ -1,0 +1,119 @@
+
+.categories__title {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.categories__posts {
+    @media (max-width: 992px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.categories__posts--item {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: transparent;
+    border: solid 0.1rem $lightGray;
+    border-radius: 1rem;
+
+    @media (max-width: 992px) {
+        width: 48%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.categories__posts--flex {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+.categories__posts--leff {
+    width: 10%;
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+}
+
+.categories__posts--image {
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.categories__posts--right {
+    width: 90%;
+    padding: 2rem;
+
+    @media (max-width: 992px) {
+        margin-top: 2rem;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.categories__author {
+    color: $h4Color;
+}
+
+.categories__posts--title a {
+    font-size: 2rem;
+    color: $h3Color;
+}
+
+.categories__posts--data {
+    margin-top: 1rem;
+}
+
+.categories__categories--list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.categories__categories--element:hover {
+    color: $lightGray;
+    text-decoration: underline;
+}
+
+.categories__tags--list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.categories__tags--element {
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    background-color: $boxColor;
+    border: solid 0.1rem $lightGray;
+    cursor: pointer;
+}
+
+.categories__tags--element:hover {
+    background-color: $hfColor;
+}
+

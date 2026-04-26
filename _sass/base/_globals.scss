@@ -1,0 +1,133 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $principalFont;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    background-color: $backColor;
+    color: white;
+
+    /** {
+        filter: opacity(0.97) brightness(1.008); /* Aplica opacidad y aumenta el brillo 
+    }*/
+}
+
+p,
+a,
+small,
+ol li,
+ul li {
+    margin: 0;
+    font-size: 1.6rem;
+    color: $lightGray;
+
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+    }
+}
+
+p {
+    margin: 1rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.875rem;
+    color: $h1Color;
+
+    @media (max-width: 768px) {
+        font-size: 3.5rem;
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: $h2Color;
+
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
+}
+
+h3 {
+    font-size: 2rem;
+    color: $h3Color;
+    margin: 1rem 0;
+    @media (max-width: 768px) {
+        font-size: 2.5rem;
+    }
+}
+
+h4 {
+    font-size: 1.875rem;
+    color: $h4Color;
+    margin-top: 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
+}
+
+ul li::marker,
+ol li::marker {
+    color: $h1Color;
+    font-size: 1.4rem;
+}
+
+strong {
+    color: $h1Color;
+}
+
+hr {
+    color: $lightGray;
+    border: solid 0.01rem $lightGray;
+    opacity: 0.6;
+    margin: 2rem auto;
+    width: 100%;
+}
+
+blockquote {
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: $boxColor;
+}
+
+.strong {
+    margin-top: 1rem;
+}

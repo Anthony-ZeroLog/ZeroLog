@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ site.iso-lang }}">
+{%- include head.html -%}
+<body>
+    
+    {%- include header.html -%}
+
+    <main class="default">
+
+        {% include squares.html %}
+
+        <div class="container">
+
+            <div class="default__hero">
+                <h2 class="default__title">Documentando mi camino hacia la ciberseguridad</h2>
+                <p>Este blog sirve como mi cuaderno de bitácora técnico y portafolio en vivo para mi postulación a un posgrado en Ciberseguridad. Aquí documentaré la adquisición de habilidades, proyectos de hacking ético, análisis de vulnerabilidades y mi entendimiento de las tendencias de seguridad más críticas.</p>
+            </div>
+
+            <div class="default__flex">
+                <div class="default__left">
+
+                    {{ content }}
+
+                </div>
+
+                <div class="default__right">
+                    
+                    <div class="default__categories">
+
+                        <h2 class="default__categories--title">Categories</h2>
+                        <div class="default__categories--list">
+                            {% for category in site.categories %}
+                                <a class="default__categories--element" href="/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
+                            {% endfor %}
+                        <div>
+
+                    </div>
+
+                    <div class="default__tags">
+                        
+                        <h2 class="default__categories--title">Tags</h2>
+                        <div class="default__tags--list">
+                            {% for tag in site.tags %}
+                                <a class="default__tags--element" href="/tag/{{ tag[0] | slugify }}/">{{ tag[0] }}</a>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </main>
+
+    {% include footer.html %}
+
+<script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
+</body>
+</html>
