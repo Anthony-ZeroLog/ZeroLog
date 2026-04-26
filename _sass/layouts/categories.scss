@@ -21,10 +21,6 @@
 
 .categories__posts--item {
     margin-bottom: 3rem;
-    padding: 2rem;
-    background-color: transparent;
-    border: solid 0.1rem $lightGray;
-    border-radius: 1rem;
 
     @media (max-width: 992px) {
         width: 48%;
@@ -54,6 +50,18 @@
 }
 
 .categories__posts--image {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border: solid 0.1rem $lightGray;
+    border-right: none;
+
+    @media (max-width: 992px) {
+        border-top-right-radius: 1.5rem;;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border: solid 0.1rem $lightGray;
+        border-bottom: none;
+    }
 
     @media (max-width: 768px) {
         width: 100%;
@@ -63,12 +71,18 @@
 .categories__posts--right {
     width: 90%;
     padding: 2rem;
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border: solid 0.1rem $lightGray;
+    border-left: none;
 
     @media (max-width: 992px) {
-        margin-top: 2rem;
-        padding: 0;
         height: 100%;
         width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1.5rem;
+        border: solid 0.1rem $lightGray;
+        border-top: none;
     }
 }
 
